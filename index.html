@@ -1,0 +1,119 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>A Game of Thrones</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/libs/modernizr-2.5.3.min.js"></script>
+</head>
+<body>
+<header>
+	A Game of Thrones
+</header>
+<div id="main" role="main">
+	<div id="configSpace">
+		<table>
+			<tr>
+				<td class="label">House:</td>
+				<td class="value">
+					<select id="customHouse">
+						<option value="stark">Stark</option>
+						<option value="lannister">Lannister</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="label">Grid Size:</td>
+				<td class="value">
+					<select id="customX">
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10" selected>10</option>
+					</select>
+					by
+					<select id="customY">
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10" selected>10</option>
+					</select>
+					squares
+				</td>
+			</tr>
+			<tr>
+				<td class="label">Number of Enemies:</td>
+				<td class="value">
+					<select id="customEnemies">
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20" selected>20</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="label">Directions of Movement:</td>
+				<td class="value">
+					<select id="customMovement">
+						<option value="4">4</option>
+						<option value="8">8</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="Start Game" id="startCustomGame" /></td>
+			</tr>
+		</table>
+	</div>
+	<div id="gameSpace" style="display:none;">
+		<canvas id="canvas"></canvas>
+		<div id="stats">
+			<span id="houseMotto" style="font-style: italic;"></span><br />
+			HP: <span id="hpCount"></span><br />
+			Move Count: <span id="moveCount"></span>
+		</div>
+		<div id="resetGameBox" style="display:none;">
+			<span id="gameMessage"></span><br />
+			<a href="#" id="resetGameLink">Play again?</a>
+		</div>
+	</div>
+</div>
+<footer>
+	"A Game of Thrones" is copyright George R. R. Martin. The use of it's name is unofficial and not licensed in any way.<br />
+	This game was written by Justin Swanson.
+</footer>
+
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
+<script src="js/libs/jquery-1.7.2.min.js"></script>
+<script src="js/game.js"></script>
+
+</body>
+</html>
